@@ -8,5 +8,4 @@ test:
   override:
     - docker run -ti test /bin/true
     - docker run -ti test /bin/bash --version
-    - docker run -ti test /usr/bin/python --version
-    - docker run -ti test /usr/bin/pyenv --version
+    - docker run -ti test pyenv --version
