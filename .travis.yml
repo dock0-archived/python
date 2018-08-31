@@ -1,0 +1,14 @@
+sudo: required
+dist: trusty
+services:
+- docker
+install:
+- docker build -t test .
+script:
+- docker run -ti test /bin/true
+- docker run -ti test /bin/bash --version
+- docker run -ti test pyenv --version
+notifications:
+  email: false
+  slack:
+    secure: Bm0gA1Qh2QXz43spzrdYdV1hPrTgl1+no6QGxCoxZ5RZ8H1xX86p3fjeN5NcBOAqoiB7cRw/CI2+7h2HbY7m1FqI9+/RSKY59qb8PqTNpD9mY1CeARNVuTyjmjz1EXsRo/yC888uu9aQe4GyQ+XE1DBNCxHT262lVgjBrRjXF8EwdqPcq5iZcivqP3Mk5LcSdIUFjwy0/3L1Bv3uKBhL1W+AouhN3yY2Scte0GBk5ypb3WYOarOnaPNtl6Hpd4TffloD6rCYzL4u7Jm9CwA69tkReuSkcz3a1CTAyJsTUtfPmTAodkHS5+C/Uy+/4A2uxc8TIZ6UHTa2pdJv8s+vnIfHon0Oa39RDBoHjjygF5PLLte26+9fS8Hfpi1miX6YSvgnqyNjOcOw595jBdEvwU9T1Wetypkc4Uwc6bDiiszs1w7czp0G20KVqM2bselU5ApUsYmdtNpN0c7W6acQRlgfNKV24mNu2c8DX6UvfoeZ5upHOV6PjRSGy/hb/26LP5MPCXh9kL5P7FMAJO6r1mNTmaGBUFBKZzIB4C0/0DRoAjAx9lNT0nOteDLQEoBo3GU7aywSyLDnAgIN5cgmEwKDu4zIZNL1sQX4622ooKKkW29GSqXUtKB40ysttvYcKoZTqtGUBu6Q4u1pck5WP+EvKFP4xpPQ+8KvQwc54bs=
