@@ -1,3 +1,5 @@
+**Deprecation Notice:** I'm no longer using this project.
+
 dock0/python
 =======
 
